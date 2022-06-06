@@ -69,7 +69,7 @@ async def on_member_remove(member):
 @bot.command(name="update")
 async def on_update_cmd(ctx):
     """ triggers manual update of member count channel """
-    print(f"* {ctx.author} issued update")
+    print(f"* {ctx.author} a actualisé le nombre de membres")
     await update_member_count_channel_name(ctx.guild)
 
 
