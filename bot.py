@@ -33,7 +33,9 @@ JSON_FILE = str(os.path.dirname(os.path.realpath(__file__))) + '/data.json'
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+activity = discord.Streaming(name="!help", url="twitch.tv/noborder_")
+
+bot = commands.Bot(command_prefix='/', activity=activity, intents=intents)
 
 @bot.event
 async def on_ready():
@@ -137,7 +139,17 @@ def get_guild_member_count_suffix(guild):
 
             return None
 
+# Setting `Playing ` status
+#await bot.change_presence(activity=discord.Game(name="a game"))
 
+# Setting `Streaming ` status
+#await bot.change_presence(activity=discord.Streaming(name="Stream de noborder", url="twitch.tv/noborder_"))
+
+# Setting `Listening ` status
+#await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
+
+# Setting `Watching ` status
+#await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
 
 if __name__ == "__main__":
     # launch bot
