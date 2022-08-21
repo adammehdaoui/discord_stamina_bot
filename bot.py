@@ -35,7 +35,7 @@ intents.members = True
 
 activity = discord.Streaming(name="!help", url="twitch.tv/noborder_")
 
-bot = commands.Bot(command_prefix='/', activity=activity, intents=intents)
+bot = commands.Bot(command_prefix='/', activity=activity, status=discord.Status.online, intents=intents)
 
 @bot.event
 async def on_ready():
