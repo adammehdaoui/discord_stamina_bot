@@ -33,9 +33,7 @@ JSON_FILE = str(os.path.dirname(os.path.realpath(__file__))) + '/data.json'
 intents = discord.Intents.default()
 intents.members = True
 
-activity = discord.Streaming(name="!help", url="twitch.tv/noborder_")
-
-bot = commands.Bot(command_prefix='/', activity=activity, status=discord.Status.online)
+bot = commands.Bot(command_prefix='/', intents=intents)
 
 @bot.event
 async def on_ready():
@@ -52,6 +50,8 @@ async def on_ready():
             print(f'* {guild.name}#{guild.id}, nombre de membres: {len(guild.members)}.')
             # update the member count
             await update_member_count_channel_name(guild)
+
+    await bot.change_presence(activity=discord.Streaming(name="My Stream", url="twitch.tv/noborder_"))
 
 
 @bot.event
