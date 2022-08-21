@@ -51,7 +51,7 @@ async def on_ready():
             # update the member count
             await update_member_count_channel_name(guild)
 
-    await bot.change_presence(activity=discord.Streaming(name="My Stream", url="twitch.tv/noborder_"))
+    await bot.change_presence(activity=discord.Game(name="Valorant"))
 
 
 @bot.event
