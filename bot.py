@@ -140,18 +140,20 @@ def get_guild_member_count_suffix(guild):
 
             return None
 
-# Setting `Playing ` status
+# Setting `Playing` status
 #await bot.change_presence(activity=discord.Game(name="a game"))
 
-# Setting `Streaming ` status
+# Setting `Streaming` status
 #await bot.change_presence(activity=discord.Streaming(name="Stream de noborder", url="twitch.tv/noborder_"))
 
-# Setting `Listening ` status
+# Setting `Listening` status
 #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
 
-# Setting `Watching ` status
+# Setting `Watching` status
 #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
 
 if __name__ == "__main__":
     # launch bot
     bot.run(DISCORD_TOKEN)
+
+#Easter Egg : SHIZU A FART EWW
