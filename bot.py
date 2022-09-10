@@ -51,8 +51,8 @@ async def on_ready():
             # update the member count
             await update_member_count_channel_name(guild)
 
-    #await bot.change_presence(activity=discord.Game(name="Valorant"))
-    await bot.change_presence(activity=discord.Streaming(name="Mon stream", url="twitch.tv/noborder_"))
+    #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
+    await bot.change_presence(activity=discord.Streaming(name="Valorant", url="http://twitch.tv/noborder_"))
 
 
 @bot.event
@@ -89,7 +89,7 @@ async def commands(ctx):
         print(f'* Appel de la commande donnant les commandes disponibles sur {guild.name} avec le bot {bot.user.name} par '
               f'{ctx.author}')
         await ctx.send(f"De nouvelles commandes sont en développement pour {bot.user.name}, commandes disponibles pour "
-                       f"l'instant : !info !nbmembres !update (actualise le nombre de membres).")
+                       f"l'instant : /info /nbmembres /update (actualise le nombre de membres).")
 
 
 @bot.command(name="nbmembres")
