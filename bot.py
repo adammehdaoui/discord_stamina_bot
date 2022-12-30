@@ -22,6 +22,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # dotenv_path = join(dir_path, '.env')
 # load_dotenv(dotenv_path)
 
+# récupération du token dans heroku
 DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
 
 load_dotenv()
