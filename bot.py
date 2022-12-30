@@ -16,15 +16,15 @@ from discord.ext import commands
 from threading import Thread
 
 #load .env file
-#dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-#dotenv_path = join(dir_path, '.env')
-#load_dotenv(dotenv_path)
+dotenv_path = join(dir_path, '.env')
+load_dotenv(dotenv_path)
 
-DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
+#DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
 
-#load_dotenv()
-#TOKEN = os.getenv('DISCORD_TOKEN')
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 #get path to data.json file
 JSON_FILE = str(os.path.dirname(os.path.realpath(__file__))) + '/data.json'
