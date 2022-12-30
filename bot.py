@@ -21,7 +21,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 dotenv_path = join(dir_path, '.env')
 load_dotenv(dotenv_path)
 
-DISCORD_TOKEN = os.environ.get('DISCORD_TOKEN')
+DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
