@@ -52,7 +52,7 @@ async def on_ready():
             await update_member_count_channel_name(guild)
 
     #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
-    await bot.change_presence(activity=discord.Streaming(name="eating ramen 🍜 ", url="http://twitch.tv/noborder_"))
+    await bot.change_presence(activity=discord.Streaming(name="travaille dur 🍜 ", url="http://twitch.tv/noborder_"))
 
 @bot.event
 async def on_member_join(member):
