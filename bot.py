@@ -54,13 +54,11 @@ async def on_ready():
     #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
     await bot.change_presence(activity=discord.Streaming(name="eating ramen 🍜 ", url="http://twitch.tv/noborder_"))
 
-
 @bot.event
 async def on_member_join(member):
     """ gets triggered when a new member joins a guild """
     print(f"* {member} joined {member.guild}")
     await update_member_count_channel_name(member.guild)
-
 
 @bot.event
 async def on_member_remove(member):
@@ -68,13 +66,11 @@ async def on_member_remove(member):
     print(f"* {member} left {member.guild}")
     await update_member_count_channel_name(member.guild)
 
-
 @bot.command(name="update")
 async def on_update_cmd(ctx):
     """ triggers manual update of member count channel """
     print(f"* {ctx.author} a actualisé le nombre de membres")
     await update_member_count_channel_name(ctx.guild)
-
 
 @bot.command(name="info")
 async def info(ctx):
