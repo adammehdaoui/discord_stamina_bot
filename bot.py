@@ -18,8 +18,9 @@ from threading import Thread
 # load .env file
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-dotenv_path = join(dir_path, '.env')
-load_dotenv(dotenv_path)
+# tests en local
+# dotenv_path = join(dir_path, '.env')
+# load_dotenv(dotenv_path)
 
 DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
 
