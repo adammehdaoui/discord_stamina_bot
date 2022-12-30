@@ -15,21 +15,20 @@ from discord.utils import get
 from discord.ext import commands
 from threading import Thread
 
-#load .env file
+# load .env file
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 dotenv_path = join(dir_path, '.env')
 load_dotenv(dotenv_path)
 
-#DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
+DISCORD_TOKEN = os.environ.get('DISCORD_TOKEN')
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-#get path to data.json file
 JSON_FILE = str(os.path.dirname(os.path.realpath(__file__))) + '/data.json'
 
-# enable discord gateway intents
+#enable discord gateway intents
 intents = discord.Intents.default()
 intents.members = True
 
@@ -126,7 +125,7 @@ def get_guild_member_count_channel_id(guild):
 
 
 def get_guild_member_count_suffix(guild):
-    """ returns the the suffix that should be displayed after the member count """
+    """ returns the suffix that should be displayed after the member count """
     with open(JSON_FILE) as json_file:
         # open JSON file
         data = json.load(json_file)
@@ -152,4 +151,4 @@ if __name__ == "__main__":
     # launch bot
     bot.run(DISCORD_TOKEN)
 
-#Easter Egg : SHIZU A FART EWW
+#Easter Egg : SHIZU A FART EWWW
